@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(226, 231, 236);
+}
+.container{
+    background-color: rgb(226, 231, 236);
+    max-width: 100vw;
+    position: relative;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid black;
+    /* position: absolute; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+}
+.navbar{
+    width: 100%;
+    /* height: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 900;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 9%;
+}
+.nav_btns{
+    /* border: 2px solid green; */
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.moodbtn{
+    position:relative;
+    width: 13%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    /* border: 2px solid red; */
+    background-color: rgb(97, 97, 241);
+}
+.moodbtn button{
+    position:absolute;
+    left:2px;
+    top: 1;
+    width: 40%;
+    height: 18px;
+    border: none;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.moodbtn button:hover{
+    /* left:30px; */
+    cursor: pointer;
+}
+.signup{
+    width: 50%;
+    height: 80%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: blueviolet;
+    font-weight: bold;
+    color: aliceblue;
+    border: 1px solid black;
+}
+.signup i{
+    color: rgb(255, 0, 221);
+}
+.signup:hover{
+    background-color: rgb(251, 255, 0);
+    color: black;
+}
+.main_container{
+    width:100%;
+    padding: 1.5rem;
+    display: flex;
+    /* border: 2px solid red; */
+}
+.side_menu{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* align-items: center; */
+}
+.upperMenu{
+    width: 100%;
+    height: 480px;
+    font-size: 1.1rem;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    overflow-y: scroll;
+    flex-direction: column;
+    /* background-color: rgb(240, 221, 221); */
+}
+.upperMenu span:hover{
+    color:blue;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.lowerMenu{
+    width: 90%;
+    height: 500px;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+    position: relative;
+}
+.lowerMenu h1{
+    text-align: center;
+}
+.lowerMenu button{
+    position: absolute;
+    top: 90%;
+    left: 41%;
+    width: 14%;
+    height: 8%;
+    border: none;
+    color: blue;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+.lowerMenu button:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.books_contens{
+    padding-left: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    /* border: 2px solid red; */
+
+}
+.books_contens h1{
+    font-size: 3rem;
+}
+/* ---------------------------------sign page----------------------------------- */
+.sign_part{
+    width: 100%;
+    height: 100vh;
+    padding:1.5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* background-color: rgb(25, 25, 160); */
+    /* border: 2px solid green; */
+}
+.forms{
+    width: 33%;
+    height: 85%;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+.form_contens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 4rem;
+    gap: 2rem;
+}
+.form_contens input{
+    width: 90%;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.form_contens input::placeholder{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.863);
+    font-weight: bold;
+    /* padding: 1rem; */
+
+}
+.signclick {
+    width: 90%;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+.cross{
+    position: absolute;
+    top: 7%;
+    left: 63%;
+    background-color: transparent;
+    font-size: 1.7rem;
+    border: none;
+}
+.cross:hover{
+    color: blue;
+    cursor: pointer;
+}
+.changeformbtn{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.signUP_btn{
+    border: none;
+    background-color: "none";
+    border-bottom: 2px solid ;
+    font-size: 1rem;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+.signIN_btn{
+    border: none;
+    background-color: "none";
+    /* border-bottom: 2px solid ; */
+    font-size: 1rem;
+    font-weight: bold;
+    /* color: blue; */
+    cursor: pointer;
+}
+/* ----------------------------------------updatecontainer-------------------------------------- */
+.updatecontainer{
+    display:flex;
+}
+
+/* -------------------------after fetching------------------------------ */
+.allbooks{
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.onebooks{
+    width: 20%;
+    height: 20%;
+    margin: 1rem;
+    border-radius: 10px;
+    display: flex;
+}
+.onebooks img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.plate{
+    width: 100%;
+    height: 300px;
+    /* border: 2px solid green; */
+}
+.plate h2{
+    color: rgb(81, 87, 87);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.imgBands{
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    height: 90%;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+.imgparts{
+    width: 45%;
+    height: 100%;
+    /* border: 2px solid rgb(0, 255, 136); */
+
+}
+.imgparts img{
+    width: 100%;
+    height: 100%;
+    border-radius:5px;
+}
+.imgparts h5{
+    font-size: 0.9rem;
+    font-family: cursive;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.imgparts .auth{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(104, 103, 101);
+    font-family: cursive;
+    font-size: 0.7rem;
+}
+.forview{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.view{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(253, 253, 0);
+    margin-top: -40px;
+    display: none;
+    text-align: center;
+    /* overflow: hidden; */
+}
+.imgparts:hover .view {
+    display: block;
+}
+.book-info{
+    display: flex;
+    gap: 2rem;
+    /* border: 2px solid red; */
+}
+#popup{
+    position: absolute;
+    top: 40px;
+    left: 30%;
+    width: 40%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 1rem;
+}
+#popup img{
+    width: 40%;
+}
+.crossnew{
+    position: absolute;
+    top: 1%;
+    left: 95%;
+    background-color: transparent;
+    font-size: 1.7rem;
+    border: none;
+}
+#popup .cart{
+    margin-top: 3rem;
+    width: 90%;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
