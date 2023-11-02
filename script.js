@@ -8,32 +8,27 @@ let detaillist = document.getElementById("popup");
 let home = document.querySelector("#all");
 let logo = document.querySelector(".logo a");
 
+
 home.addEventListener("click", ()=>{
     window.location.reload();
 })
 
 
 // console.log(Books_List);
-// Books_List.forEach((ele)=>{
-//     console.log(ele.textContent);
-//     let val = ele.textContent;
-
-//     val.addEventListener("click", ()=>{
-
-//     })
-// })
 Books_List.addEventListener("click",(e)=>{
     if(e.target.classList.contains("Liist")){
         datafetch(e.target.innerText);
     }
 })
+
+// ---------------------adding events for sign buttons----------------------//
 signnbtn.addEventListener("click", ()=>{
         main.style.display = "none";
         signpage.style.display = "flex";
         background.style.background="blue";
         signfun();
 })
-
+// -----------------------for sign in page------------------//
 function signfun(){
     signpage.innerHTML = `<div class ="forms">
         <div class = "form_contens">
@@ -106,7 +101,7 @@ async function listnameonly(){
 
             imgparts.addEventListener("click",()=>{
                 let descrip = element.description;
-
+                console.log(element);
                 if (descrip === "") {
                     descrip = "There is no description of this book.";
                 }
@@ -118,14 +113,19 @@ async function listnameonly(){
                     <span class="author">${element.author}</span>
                     <p class="description">${descrip}</p>
                     <div class="icons">
-                        <a href="${element.buy_links[0].url}"><img src="./Assets/amazon-shop-1x.d33dc585.png" alt=""></a>
-                        <a href="${element.buy_links[1].url}"><img src="./Assets/apple-shop-1x.aeb5cfd2.png" alt=""></a>
-                        <a href="${element.buy_links[3].url}"><img src="./Assets/bookshop-1x.d3877644.png" alt=""></a>
+                        <a href="${element.buy_links[0].url}">Amazon</a>
+                        <a href="${element.buy_links[1].url}">Apple Book</a>
+                        <a href="${element.buy_links[4].url}">Bookshop</a>
                     </div>
                 </div>
             </div>
             <button class="cart">Add to Shopping Cart</button>`
             viewDetails();
+
+            let btn = document.querySelector(".crossnew");
+            btn.addEventListener("click", ()=>{
+                popup.close();
+            })
 
             })
             imgBands.appendChild(imgparts);
@@ -184,13 +184,7 @@ async function datafetch(val){
 
 
 
-
-
-
-
-
-
-
+// -----------------------------------------making toggle----------------------//
 
 
 let moodbtn = document.querySelector("#mobtn");
@@ -199,7 +193,7 @@ moodbtn.addEventListener('click', ()=>{
     if(moodbtn.style.left == "2px"){
         moodbtn.style.left = "30px";
         moodbtn.style.background ="black"
-        background.style.backgroundColor = "rgb(71, 71, 71)"
+        background.style.backgroundColor = "rgba(0, 0, 0, 0.952)"
         background.style.color = "white";
         nav.style.backgroundColor = "black";
         nav.style.color = "white"

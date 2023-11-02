@@ -88,6 +88,7 @@ nav{
     font-weight: bold;
     color: aliceblue;
     border: 1px solid black;
+    /* background-color: rgba(0, 0, 0, 0.952); */
 }
 .signup i{
     color: rgb(255, 0, 221);
@@ -117,8 +118,16 @@ nav{
     display: flex;
     gap: 2rem;
     overflow-y: scroll;
+    scrollbar-color: pink lightblue;
     flex-direction: column;
     /* background-color: rgb(240, 221, 221); */
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(9, 54, 75);
+    border-radius: 20px;
 }
 .upperMenu span:hover{
     color:blue;
@@ -163,6 +172,9 @@ nav{
 }
 .books_contens h1{
     font-size: 3rem;
+    font-family: cursive;
+    color: rgb(55, 156, 240);
+    text-shadow: 2px 4px 5px rgb(68, 66, 66);
 }
 /* ---------------------------------sign page----------------------------------- */
 .sign_part{
@@ -282,7 +294,9 @@ nav{
     /* border: 2px solid green; */
 }
 .plate h2{
-    color: rgb(81, 87, 87);
+    color: rgb(7, 72, 126);
+    text-decoration: underline;
+    text-shadow: 2px 1px 3px rgb(16, 30, 49);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .imgBands{
@@ -364,6 +378,18 @@ nav{
     background-color: transparent;
     font-size: 1.7rem;
     border: none;
+    cursor: pointer;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.title{
+    color: rgb(97, 16, 16);
+    font-size: 2rem;
 }
 #popup .cart{
     margin-top: 3rem;
@@ -373,4 +399,18 @@ nav{
     border: none;
     color: white;
     border-radius: 20px;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+}
+.icons a{
+    text-decoration: none;
+    font-family: cursive;
+    color: rgb(247, 210, 1);
+}
+
+/*-------------------------------------------------- adding media query----------------------------- */
+@media (min-width:500px) and (max-width:750px) {
+
 }
